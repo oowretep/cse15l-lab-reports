@@ -1,5 +1,10 @@
 Hello World!
 
+Lab Reports:
+[Lab 1](https://oowretep.github.io/cse15l-lab-reports/lab1.html)
+
+--- 
+Examples of Markdown:
 # Heading
 ## Another Heading
 
