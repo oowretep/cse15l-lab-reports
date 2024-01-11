@@ -24,6 +24,7 @@ When using the `cd` command with a path to a file as an argument, we can see the
 
 ## Using `ls`
 When using the `ls` command with no arguments, we can see the following output:
+
 ![Image](ls%20no%20arg.png)
 
 > The working directory was the root (`~`) directory, and we see an output of `lecture1` since that is the only item within the root directory. 
