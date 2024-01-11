@@ -10,7 +10,7 @@ Examples of Markdown:
 
 [Link to anotherfile](https://oowretep.github.io/cse15l-lab-reports/anotherfile.html) 
 
-![Image](http://url/a.png)
+![Image](https://www.google.com/search?client=firefox-b-1-d&sca_esv=597555770&q=github+logo&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjTx7fj7tWDAxV1PUQIHe-JARYQ0pQJegQIDhAB&biw=1512&bih=831&dpr=2#imgrc=thYE3r73bm1jUM)
 
  > This is a Blockquote
 
