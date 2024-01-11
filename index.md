@@ -22,8 +22,8 @@ Examples of Markdown:
 2. Two
 3. Three
 
+`Inline code` with backticks and *Italic* with some **Bold**
+
 Horizontal rule:
 
 --- 
-
-`Inline code` with backticks and *Italic* with some **Bold**
