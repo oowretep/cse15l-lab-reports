@@ -6,7 +6,7 @@
     Share an example of using the command with a path to a file as an argument.
 
 ## Using `cd`
-![Image](https://github.com/oowretep/cse15l-lab-reports/cd%20no%20arg.png) 
+![Image](https://github.com/oowretep/cse15l-lab-reports/blob/main/cd%20no%20arg.png) 
 ![Image](https://github.com/oowretep/cse15l-lab-reports/blob/main/cd%20dir.png) 
 ![Image](https://github.com/oowretep/cse15l-lab-reports/blob/main/cd%20file.png) 
 
