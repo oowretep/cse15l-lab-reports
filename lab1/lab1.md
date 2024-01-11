@@ -3,7 +3,7 @@
 ## Using `cd`
 When using the `cd` command with no arguments, we can see the following output:
 
-![Image](lab1/images/cd%20no%20arg.png) 
+![Image](images/cd%20no%20arg.png) 
 
 > When the working directory was the root (`~`) directory, we can see no change happening and we remain in the root directory.
 When we `cd` into another directory like `lecture1`, we can see that using the `cd` command with no arguments brings us back to the root directory.
