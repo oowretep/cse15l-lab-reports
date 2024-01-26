@@ -1,75 +1,63 @@
 # Lab 2
 
-## Using `cd`
-When using the `cd` command with no arguments, we can see the following output:
+## Part 1
+Code for ChatServer:
+```
+import java.io.IOException;
+import java.net.URI;
+import java.io.BufferedWriter;
 
-![Image](images/cd%20no%20arg.png) 
+class ChatHandler implements URLHandler {
+    String chat = "";
 
-> When the working directory was the root (`/`) directory, we can see no change happening and we remain in the root directory.
-When we `cd` into another directory like `lecture1`, we can see that using the `cd` command with no arguments brings us back to the root directory.
-> There was no error when running `cd` with no arguments.
+    // /add-message?s=<MESSAGE>&user=<NAME>
+    public String handleRequest(URI url) {
+        if (url.getPath().equals("/add-message")) {
+            String[] params = url.getQuery().split("&");
+            String[] messageArr = params[0].split("=");
+            String[] userArr = params[1].split("=");
 
-When using the `cd` command with a path to a directory as an argument, we can see the following output:
+            if (userArr[0].equals("user") && messageArr[0].equals("s")) {
+                String user = userArr[1];
+                String message = messageArr[1];
+                this.chat += user + ": " + message + "\n\n";
+                return this.chat;
+            }
+        }
 
-![Image](images/cd%20dir.png) 
+        return "Use /add-message?s=<MESSAGE>&user=<NAME>";
+    }
+}
 
-> The working directory was the root (`/`) directory and using the command `cd lecture1` brought us into the `lecture1` direcory
-> There was no error when running `cd` with a directory as an argument.
+class ChatServer {
+    public static void main(String[] args) throws IOException {
+        int port = Integer.parseInt(args[0]);
+        Server.start(port, new ChatHandler());
+    }
+}
+```
 
-When using the `cd` command with a path to a file as an argument, we can see the following output:
+Below are two screenshots of using `/add-message`:
+![Image](img/message1.png)
+> The method used in my request is `handleRequest`. The relevant argument is the URL that is passed in and the relevant values are the chat history field of the class `String chat`, the arrays of strings `String[] params`, `String[] messageArr` and `String[] userArr`. The values of the string arrays get changed based on the URL that is passed in. In this case, the URL is now dealing with a query of the message `Hello` from `jpolitz`. The values of `params`, `messageArr` and `userArr` are now changed to hold the query values. Then the `chat` string is updated to include `jpolitz: Hello`
 
-![Image](images/cd%20file.png) 
-
-> The working directory was the lecture1 (`~/lecture1`) directory and using the command `cd Hello.java` gave us an output of `bash: cd: Hello.java: Not a directory`
-> This output was an error since we can not `cd` into a file.
-
----
-
-## Using `ls`
-When using the `ls` command with no arguments, we can see the following output:
-
-![Image](images/ls%20no%20arg.png)
-
-> The working directory was the root (`/`) directory, and we see an output of `lecture1` since that is the only item within the root directory. 
-> There was no error when running `ls` with no arguments.
-
-When using the `ls` command with a path to a directory as an argument, we can see the following output:
-
-![Image](images/ls%20dir.png) 
-
-> The working directory was the root (`/`) directory and using the command `ls lecture1` gave us an output of all the items within the `lecture1` directory.
-> There was no error when running `cd` with a directory as an argument.
-
-When using the `ls` command with a path to a file as an argument, we can see the following output:
-
-![Image](images/ls%20file.png) 
-
-> The working directory was the lecture1 (`~/lecture1`) directory and using the command `ls Hello.java` gave us an output the item itself since it is a single file.
-> There was no error when running `ls` with a directory as an argument.
+![Image](img/message2.png)
+> The method used in my request is the same as above. The relevant arguments are still the same as the URL is being passed in and the relevant values of `chat`, `params`, `messageArr` and `userArr` are still being used. In this case, the URL is now dealing with a query of the message `How are you` from `yash`. The values of `params`, `messageArr` and `userArr` are now changed to hold the query values. The `chat` string previously held `jpolitz: Hello` and the chat line `yash: How are you` is concatenated onto it (with `\n\n` for two newlines to provide some spacing).
 
 ---
 
-## Using `cat`
-When using the `cat` command with no arguments, we can see the following output:
+## Part 2
+Private Key path:
+![Image](img/privatekey.png)
 
-![Image](images/cat%20no%20arg.png)
+Public Key path:
+![Image](img/publickey.png)
 
-> The working directory was the root (`/`) directory, and we see that the command is running indefinitely as pressing `enter` or any other key will result in those being listed out as seen in the screenshot. The command will continue to run, resulting in the terminal being "stuck", until `ctrl-c` (for mac) is used to exit the command. 
-> This output can be considered an error when using the `cat` command with no arguments since the desired output is not what we want. The `cat` argument expects a file name so it will continue to "stall" until a file name is passed in or else we need to exit the command.
-
-When using the `cat` command with a path to a directory as an argument, we can see the following output:
-
-![Image](images/cat%20dir.png) 
-
-> The working directory was the lecture1 (`~/lecture1`) directory and using the command `cat messages/` gave us an output of `cat: messages/: Is a directory`
-> This output is an error since the `cat` command expects a file and not a directory as its argument.
-
-When using the `ls` command with a path to a file as an argument, we can see the following output:
-
-![Image](images/cat%20file.png) 
-
-> The working directory was the lecture1 (`~/lecture1`) directory and using the command `cat Hello.java` gave us an output of the contents of the `Hello.java` file as seen in the screenshot above.
-> There was no error when running `cat` with a file as an argument.
+Logging into `ieng6` without being prompted for password:
+![Image](img/loginnopass.png)
 
 ---
-*note: resubmission to fix the error regarding the root directory*
+
+## Part 3
+- From week 2, I learned how to create a Java Server. It was interesting to look at the base code for `Server.java` and see how the server functions and what is needed to create one. I also learned how to remotely connect to `ieng6` and how to setup a remote server using the connection. It was really cool to see the number incrementer app work on different devices, locally and remotely, and see it update.
+- From week 3, I learned how to setup an SSH key to login wihout being asked for a password. When setting up the SSH key, I learned about `scp` and what the command does. I also learned how to use `man` to look up command manuals in the terminal without having to search it up online.
