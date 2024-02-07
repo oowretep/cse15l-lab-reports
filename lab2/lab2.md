@@ -47,10 +47,10 @@ Below are two screenshots of using `/add-message`:
 ---
 
 ## Part 2
-Private Key path:
+Private Key path: /Users/peter/.ssh/id_rsa
 ![Image](img/privatekey.png)
 
-Public Key path:
+Public Key path:/home/linux/ieng6/oce/42/442/pjwoo/.ssh/authorized_keys
 ![Image](img/publickey.png)
 
 Logging into `ieng6` without being prompted for password:
@@ -61,3 +61,5 @@ Logging into `ieng6` without being prompted for password:
 ## Part 3
 - From week 2, I learned how to create a Java Server. It was interesting to look at the base code for `Server.java` and see how the server functions and what is needed to create one. I also learned how to remotely connect to `ieng6` and how to setup a remote server using the connection. It was really cool to see the number incrementer app work on different devices, locally and remotely, and see it update.
 - From week 3, I learned how to setup an SSH key to login wihout being asked for a password. When setting up the SSH key, I learned about `scp` and what the command does. I also learned how to use `man` to look up command manuals in the terminal without having to search it up online.
+
+*note: added the private and public key paths to part 2 for regrade request.
