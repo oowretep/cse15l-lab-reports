@@ -74,7 +74,7 @@ This code was buggy because it was not storing the values when swapping them wit
 ## Part 2
 I chose to look into the `less` command
 
-1. Search within less using `/` (ChatGPT):
+1) Search within less using `/` (ChatGPT):
 
 Example 1:
 ```
@@ -97,7 +97,7 @@ less *.txt
 ![Image](img/less2.png)
 
 
-2. Jump to a specific line with `+` (ChatGPT):
+2) Jump to a specific line with `+` (ChatGPT):
 
 Example 1:
 ```
@@ -117,7 +117,7 @@ less +2 *.txt
 ![Image](img/less4.png)
 
 
-3. Follow the end of a growing file with `+F` (ChatGPT):
+3) Follow the end of a growing file with `+F` (ChatGPT):
 
 Example 1:
 ```
@@ -136,7 +136,7 @@ less +F *.txt
 ![Image](img/less6.png)
 
 
-4. Display line numbers with `-N` (ChatGPT):
+4) Display line numbers with `-N` (ChatGPT):
 
 Example 1:
 ```
