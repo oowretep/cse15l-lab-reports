@@ -116,21 +116,27 @@ less +2 *.txt
 
 ![Image](img/less4.png)
 
----***---
+
 3. Follow the end of a growing file with `+F` (ChatGPT):
 
 Example 1:
 ```
-code block
+less +F technical/biomed/1468-6708-3-1.txt 
 ```
+> Here I am looking to watch `technical/biomed/1468-6708-3-1.txt` if there are changes being made to it while viewing using `+F`. Currently, there are no changes, but as you can see from the image, `less` is watching for changes to be made.
+
+![Image](img/less5.png)
+
 Example 2:
 ```
-code block
+less +F *.txt  
 ```
+> Here is a similar result, but instead of looking in a specific file for changes, I am looking at the results of `*.txt` using `less` and `+F`. The output shows that `less +F` is "waiting for data".
 
+![Image](img/less6.png)
 
+---***---
 4. Display line numbers with `-N` (ChatGPT):
-
 
 Example 1:
 ```
