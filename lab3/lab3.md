@@ -78,21 +78,21 @@ I chose to look into the `less` command
 
 Example 1:
 ```
-docsearch % less *.txt
+less *.txt
 /
 /technical/biomed/1471-2091
 ```
-> Here I am in `docsearch` and using `less *.txt`. I get a large output showing `490673 3437323 26328271 total`. I then use `/` to start a search within `less` and look for `/technical/biomed/1471-2091`. This then highlights a result of files matching that pattern I was searching for.
+> Here I am in `docsearch` and using `less *.txt`. I get a large output showing `490673 3437323 26328271 total`. I then use `/` to start a search within `less` and look for `/technical/biomed/1471-2091`. This then highlights a result of files matching that pattern I was searching for. This can be useful if you cannot remember certain file names, but remember general folder structures. Then you can see what files are there based on the pattern given to the search.
 
 ![Image](img/less1.png)
 
 Example 2:
 ```
-docsearch % less *.txt
+less *.txt
 /
 /technical/plos
 ```
-> Here I am in `docsearch` and using `less *.txt`. I get the same output and am going to search for `/technical/plos`. I am given a notice that the pattern is not found.
+> Here I am in `docsearch` and using `less *.txt`. I get the same output and am going to search for `/technical/plos`. I am given a notice that the pattern is not found. This is useful to search for specific patterns and see if they are present in the output.
 
 ![Image](img/less2.png)
 
@@ -103,7 +103,7 @@ Example 1:
 ```
 less +10 technical/biomed/1468-6708-3-1.txt
 ```
-> Here I am going to line 10 in `technical/biomed/1468-6708-3-1.txt`. I am using less to look at the output of this particular file and using the `+10` command to jump to line 10 of the document.
+> Here I am going to line 10 in `technical/biomed/1468-6708-3-1.txt`. I am using less to look at the output of this particular file and using the `+10` command to jump to line 10 of the document. This is useful for being able to move quickly through a document and being able to change lines.
 
 ![Image](img/less3.png)
 
@@ -112,7 +112,7 @@ Example 2:
 less +2 *.txt
 ```
 > Here I am moving to line 2 when looking at the output of the search result for `*.txt` within `docsearch`. Line 1 is `432    3380   24112 technical/biomed/1468-6708-3-1.txt`, but I start out in line 2 which is `533    3630   29585 technical/biomed/1468-6708-3-10.txt
-`
+`. This is useful for being able to quickly move through the output and going to specific results.
 
 ![Image](img/less4.png)
 
@@ -123,7 +123,7 @@ Example 1:
 ```
 less +F technical/biomed/1468-6708-3-1.txt 
 ```
-> Here I am looking to watch `technical/biomed/1468-6708-3-1.txt` if there are changes being made to it while viewing using `+F`. Currently, there are no changes, but as you can see from the image, `less` is watching for changes to be made.
+> Here I am looking to watch `technical/biomed/1468-6708-3-1.txt` if there are changes being made to it while viewing using `+F`. Currently, there are no changes, but as you can see from the image, `less` is watching for changes to be made. This could be useful for watching changes to documents happen at that time and monitoring those changes.
 
 ![Image](img/less5.png)
 
@@ -131,7 +131,7 @@ Example 2:
 ```
 less +F *.txt  
 ```
-> Here is a similar result, but instead of looking in a specific file for changes, I am looking at the results of `*.txt` using `less` and `+F`. The output shows that `less +F` is "waiting for data".
+> Here is a similar result, but instead of looking in a specific file for changes, I am looking at the results of `*.txt` using `less` and `+F`. The output shows that `less +F` is "waiting for data". This could be useful for watching changes such as adding and removing specific documents which could change the search results.
 
 ![Image](img/less6.png)
 
@@ -140,11 +140,17 @@ less +F *.txt
 
 Example 1:
 ```
-code block
+less -N *.txt 
 ```
+> Using the `-N` option for `less`, I am able to see the line numbers for the search of `*.txt*`. This is useful to see the line numbers as some outputs become very difficult to see what line you are currently on. This command can be combined with others like `+` to jump to a certain line and see the line number from there.
+
+![Image](img/less7.png)
+
 Example 2:
 ```
-code block
+less -N +12 technical/biomed/1468-6708-3-1.txt
+```
+> Using `-N +12`, I was able to use `less` to search for `technical/biomed/1468-6708-3-1.txt` and get to line 12 without having to scroll there myself. This is useful to be able to move around quickly though a file and see the line numbers.
 
 ---
 
