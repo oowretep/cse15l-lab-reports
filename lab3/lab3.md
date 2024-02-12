@@ -101,14 +101,22 @@ docsearch % less *.txt
 
 Example 1:
 ```
-code block
+less +10 technical/biomed/1468-6708-3-1.txt
 ```
+> Here I am going to line 10 in `technical/biomed/1468-6708-3-1.txt`. I am using less to look at the output of this particular file and using the `+10` command to jump to line 10 of the document.
+
+![Image](img/less3.png)
+
 Example 2:
 ```
-code block
+less +2 *.txt
 ```
+> Here I am moving to line 2 when looking at the output of the search result for `*.txt` within `docsearch`. Line 1 is `432    3380   24112 technical/biomed/1468-6708-3-1.txt`, but I start out in line 2 which is `533    3630   29585 technical/biomed/1468-6708-3-10.txt
+`
 
+![Image](img/less4.png)
 
+---***---
 3. Follow the end of a growing file with `+F` (ChatGPT):
 
 Example 1:
