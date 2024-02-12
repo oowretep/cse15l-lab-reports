@@ -145,3 +145,16 @@ code block
 Example 2:
 ```
 code block
+
+---
+
+ChatGPT Citation:
+Using ChatGPT, I searched for `find 4 interesting command-line options or alternate ways to use less`
+
+I then got an output of
+
+![Image](img/citation1.png)
+
+![Image](img/citation2.png)
+
+which I used as a starting point for my testing and results.
