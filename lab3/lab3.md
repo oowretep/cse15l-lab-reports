@@ -152,6 +152,8 @@ less -N +12 technical/biomed/1468-6708-3-1.txt
 ```
 > Using `-N +12`, I was able to use `less` to search for `technical/biomed/1468-6708-3-1.txt` and get to line 12 without having to scroll there myself. This is useful to be able to move around quickly though a file and see the line numbers.
 
+![Image](img/less8.png)
+
 ---
 
 ChatGPT Citation:
