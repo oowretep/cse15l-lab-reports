@@ -72,7 +72,62 @@ This code was buggy because it was not storing the values when swapping them wit
 ---
 
 ## Part 2
-I chose to look into the `grep` command
+I chose to look into the `less` command
 
-1. Recursive search with `-r` (ChatGPT source):
+1. Search within less using `/` (ChatGPT):
+
+Example 1:
 ```
+docsearch % less *.txt
+/
+/technical/biomed/1471-2091
+```
+> Here I am in `docsearch` and using `less *.txt`. I get a large output showing `490673 3437323 26328271 total`. I then use `/` to start a search within `less` and look for `/technical/biomed/1471-2091`. This then highlights a result of files matching that pattern I was searching for.
+
+![Image](img/less1.png)
+
+Example 2:
+```
+docsearch % less *.txt
+/
+/technical/plos
+```
+> Here I am in `docsearch` and using `less *.txt`. I get the same output and am going to search for `/technical/plos`. I am given a notice that the pattern is not found.
+
+![Image](img/less2.png)
+
+
+2. Jump to a specific line with `+` (ChatGPT):
+
+Example 1:
+```
+code block
+```
+Example 2:
+```
+code block
+```
+
+
+3. Follow the end of a growing file with `+F` (ChatGPT):
+
+Example 1:
+```
+code block
+```
+Example 2:
+```
+code block
+```
+
+
+4. Display line numbers with `-N` (ChatGPT):
+
+
+Example 1:
+```
+code block
+```
+Example 2:
+```
+code block
