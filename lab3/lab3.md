@@ -69,5 +69,10 @@ static void reverseInPlace(int[] arr) {
 
 This code was buggy because it was not storing the values when swapping them without using any sort of temp storage. Adding a temp int, I was able to fix the bug and reverse the array in place without needing a temp array.
 
+---
 
 ## Part 2
+I chose to look into the `grep` command
+
+1. Recursive search with `-r` (ChatGPT source):
+```
