@@ -135,7 +135,7 @@ less +F *.txt
 
 ![Image](img/less6.png)
 
----***---
+
 4. Display line numbers with `-N` (ChatGPT):
 
 Example 1:
