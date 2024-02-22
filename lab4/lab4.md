@@ -14,7 +14,7 @@
 
 ## Run the test
 ![Image](img/5.png)
-> First we are going to `ls` to see the files in the repo we cloned. Then using the `cd` command, we will move into the `lab7` directory. Then using `ls` again, we can see the `test.sh` script that we can run.
+> First we are going to `ls` to see the files in the repo we cloned. Then using the `cd` command, we will move into the `lab7` directory. Then using `ls` again, we can see the `test.sh` script that we want to run.
 
 ![Image](img/6.png)
 > Running the test using `bash test.sh`, we can see that a test has failed
