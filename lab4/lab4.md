@@ -33,7 +33,7 @@
 > Now that the line is fixed, we can use `:wq` to save and quit
 
 ![Image](img/11.png)
-> Use `<up> twice to get the `bash test.sh` command from bash history and run the test again
+> Use `<up>` twice to get the `bash test.sh` command from bash history and run the test again
 
 ![Image](img/12.png)
 > The test is now successful and our code works so we can now commit and push our changes
