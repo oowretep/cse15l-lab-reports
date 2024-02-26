@@ -5,7 +5,7 @@ Lab Reports:
 * [Lab 2](https://oowretep.github.io/cse15l-lab-reports/lab2/lab2.html)
 * [Lab 3](https://oowretep.github.io/cse15l-lab-reports/lab3/lab3.html)
 * [Lab 4](https://oowretep.github.io/cse15l-lab-reports/lab4/lab4.html)
-* 
+
 --- 
 Examples of Markdown:
 For heading use `#`
